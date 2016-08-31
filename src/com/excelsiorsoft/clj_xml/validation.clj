@@ -1,4 +1,9 @@
 (ns com.excelsiorsoft.clj-xml.validation
+  (:import (java.io File StringReader))
+  (:import (javax.xml XMLConstants))
+  (:import (javax.xml.validation SchemaFactory))
+  (:import (javax.xml.transform.stream StreamSource))
+  (:import (org.xml.sax SAXException))
   (:gen-class))
 
 (defn -main
@@ -6,12 +11,12 @@
   [& args]
   (println "Hello, World!"))
 
-(import 'javax.xml.XMLConstants)
-(import 'org.xml.sax.SAXException)
-(import 'javax.xml.validation.SchemaFactory)
-(import 'java.io.File)
-(import 'java.io.StringReader)
-(import 'javax.xml.transform.stream.StreamSource)
+;(import 'javax.xml.XMLConstants)
+;(import 'org.xml.sax.SAXException)
+;(import 'javax.xml.validation.SchemaFactory)
+;(import 'java.io.File)
+;(import 'java.io.StringReader)
+;(import 'javax.xml.transform.stream.StreamSource)
 
 (defn validate-against [& schemas]
   (let [sources (into-array StreamSource (map #(-> (File. %)
