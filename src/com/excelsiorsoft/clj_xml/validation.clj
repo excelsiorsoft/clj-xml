@@ -1,4 +1,4 @@
-(ns clj-xml.core
+(ns com.excelsiorsoft.clj-xml.validation
   (:gen-class))
 
 (defn -main
