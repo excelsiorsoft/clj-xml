@@ -24,3 +24,8 @@
         (.validate validator (StreamSource. (StringReader. xmldoc)))
         true
         (catch SAXException e false)))))
+
+;;(def is-valid-xml? (validate-against "resources/test.xsd"))
+;;=> #'com.excelsiorsoft.clj-xml.validation/is-valid-xml?
+;;(is-valid-xml? "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<addresses xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n           xsi:noNamespaceSchemaLocation='test.xsd'>\n\n    <address>\n        <name>Joe Tester</name>\n        <street>Baker street 5</street>\n    </address>\n\n</addresses>")
+;;=> true
