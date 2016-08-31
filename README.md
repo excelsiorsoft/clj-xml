@@ -1,36 +1,19 @@
 # clj-xml
 
-FIXME: description
+Clojure wrapper around Java XML schema validation libraries.
+validate-against takes a path to an .xsd schema (or a collection thereof) and produces a fn which takes an XML string and responds with 'true' (XML is valid against that schema) or 'false' otherwise
 
-## Installation
-
-Download from http://example.com/FIXME.
 
 ## Usage
+```
+(require '[com.excelsiorsoft.clj-xml.validation :as xmlv])
+(def is-valid-xml? (xmlv/validate-against "resources/schema.xsd"))
+(is-valid-xml? "<foo><bar/></foo>")
+```
 
-FIXME: explanation
-
-    $ java -jar clj-xml-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 Excelsior Software Ltd.
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License.
