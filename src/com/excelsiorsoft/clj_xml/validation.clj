@@ -6,17 +6,7 @@
   (:import (org.xml.sax SAXException))
   (:gen-class))
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
 
-;(import 'javax.xml.XMLConstants)
-;(import 'org.xml.sax.SAXException)
-;(import 'javax.xml.validation.SchemaFactory)
-;(import 'java.io.File)
-;(import 'java.io.StringReader)
-;(import 'javax.xml.transform.stream.StreamSource)
 
 (defn validate-against [& schemas]
   (let [sources (into-array StreamSource (map #(-> (File. %)
