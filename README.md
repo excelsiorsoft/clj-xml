@@ -1,7 +1,9 @@
 # clj-xml
 
 Clojure wrapper around Java XML schema validation libraries.
-validate-against takes a path to an .xsd schema (or a collection thereof) and produces a fn which takes an XML string and responds with 'true' (XML is valid against that schema) or 'false' otherwise
+validate-against takes a path to an .xsd schema (or a collection thereof) 
+and produces a fn which takes an XML string and responds with 'true' (if XML is valid against that schema) 
+or 'false' otherwise
 
 
 ## Usage

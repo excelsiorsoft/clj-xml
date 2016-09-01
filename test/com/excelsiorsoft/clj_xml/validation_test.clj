@@ -18,7 +18,7 @@
   (is (= true (validate (slurp "resources/valid.xml")))))
 
 (deftest ouside-xml
-  (testing "valid xml is  passed in as as an external file")
+  (testing "valid xml is  passed (twice) in as as an external file")
   (is (= true (validate (slurp "resources/valid.xml"))))
   (is (= true (validate (slurp "resources/valid.xml")))))
 
